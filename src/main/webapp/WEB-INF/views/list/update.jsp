@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <c:set var="rootPath" value="${pageContext.request.contextPath}" />
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,10 +12,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form:form method="POST">
-		<input name="t_todo"  placeholder="메모를 입력하세요">
-		<button>메모기록</button>		
-	</form:form>
+<form:form>
+	<input name="t_todo" value="${TODO.t_todo}">
+	<button>저장</button>
 
+</form:form>
 </body>
 </html>

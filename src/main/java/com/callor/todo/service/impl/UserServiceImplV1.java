@@ -41,11 +41,6 @@ public class UserServiceImplV1 implements UserService{
 		// TODO Auto-generated method stub
 		
 	}
-	@Override
-	public void create_todo_table() {
-	userDao.create_todo_table();
-		
-	}
 
 
 	@Override
@@ -119,13 +114,6 @@ public class UserServiceImplV1 implements UserService{
 							.getAuthentication();
 		UserVO userVO = (UserVO) auth.getPrincipal();
 	}
-
-	@Override
-	public int todoInsert(TodoVO toVO) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
 
 
 	

@@ -6,6 +6,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import com.callor.todo.persistance.TodoDao;
 import com.callor.todo.persistance.UserDao;
 
 @Service
@@ -13,6 +14,8 @@ public class BeanServiceImpl {
 	
 	@Autowired
 	private UserDao userDao;
+	@Autowired
+	private TodoDao todoDao;
 	
 	@Bean("passwordEncoder")
 	public PasswordEncoder getPassword() {
@@ -24,7 +27,7 @@ public class BeanServiceImpl {
 	public void create_table() {
 		userDao.create_user_table();
 		userDao.create_auth_table();
-		userDao.create_todo_table();
+		todoDao.create_todo_table();
 		
 	}
 	

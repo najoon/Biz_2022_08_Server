@@ -17,6 +17,10 @@ public class TodoVO {
 	private String t_date;
 	private String t_time;
 	private String t_todo;
+	private String s_date;
+	private String s_time;
+	private String s_todo;
+	
 
 
 }

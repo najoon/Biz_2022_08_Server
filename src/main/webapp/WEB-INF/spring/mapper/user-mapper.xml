@@ -5,21 +5,7 @@
 
 <mapper namespace="com.callor.todo.persistance.UserDao">
 
-	<insert id="todoInsert" parameterType="TodoVO">
-		INSERT INTO tbl_todoList(
-		t_date,
-		t_time,
-		t_todo
-		) VALUES (
-		#{t_date},
-		#{t_time},
-		#{t_todo}
-		)
-	</insert>
-
-	<select id="selectAll" resultType="TodoVO">
-		SELECT * FROM tbl_todoList
-	</select>
+	
 	<select id="findById" resultType="UserVO">
 		SELECT * FROM tbl_users
 		WHERE username = #{username}
@@ -78,13 +64,5 @@
 		)
 	</select>
 
-	<select id="create_todo_table">
-		CREATE TABLE IF NOT EXISTS tbl_todoList (
-		t_seq BIGINT PRIMARY KEY AUTO_INCREMENT,
-		t_date VARCHAR(10),
-		t_time VARCHAR(10),
-		t_todo VARCHAR(40)
-		)
-	</select>
 
 </mapper> 
